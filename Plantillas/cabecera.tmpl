@@ -1,0 +1,24 @@
+{{define "cabecera"}}
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NUESTRO PROYECTO</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    
+    <nav class="bg-gray-500 text-white flex h-12 justify-between items-center">
+  <a href="/" class="text-xl font-bold ml-3">Nuestro Proyecto</a>
+
+  <div class="flex items-center mr-6">
+    <a href="/agregar" class="hover:bg-gray-700 px-3 py-2 rounded-md text-base font-medium">Agregar</a>
+    <a href="#" class="hover:bg-gray-700 px-3 py-2 rounded-md text-base font-medium">Eliminar</a>
+    <a href="#" class="hover:bg-gray-700 px-3 py-2 rounded-md text-base font-medium">Salir</a>
+  </div>
+</nav>
+    
+    <div class="mx-auto my-auto container">
+
+{{end}}

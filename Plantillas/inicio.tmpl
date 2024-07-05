@@ -1,0 +1,26 @@
+{{define "inicio"}}
+{{template "cabecera"}}
+
+<table class="w-9/12 table-auto border border-gray-200 rounded shadow mx-auto my-8 text-center rounded-lg">
+  <thead>
+    <tr class="bg-gray-100 text-gray-600 text-center font-medium">
+      <th class="px-4 py-2">ID</th>
+      <th class="px-4 py-2">MARCA</th>
+      <th class="px-4 py-2">MODELO</th>
+      <th class="px-4 py-2">PRECIO</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="border-bottom border-gray-200 px-4 py-2">1</td>
+      <td class="border-bottom border-gray-200 px-4 py-2">Xiaomi</td>
+      <td class="border-bottom border-gray-200 px-4 py-2">Redmin</td>
+      <td class="border-bottom border-gray-200 px-4 py-2">200</td>
+    </tr>
+    </tbody>
+</table>
+
+<a name="NuevoTelefono" id="NewPhone" class="inline-flex items-center px-4 py-2 bg-blue-500 text-white font-bold rounded-md shadow hover:bg-blue-700" href="/agregar" role="button">Agregar telefono</a>
+
+{{template "pie"}}
+{{end}}
