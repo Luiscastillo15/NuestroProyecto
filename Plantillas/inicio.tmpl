@@ -1,6 +1,7 @@
 {{define "inicio"}}
 {{template "cabecera"}}
 
+<div class="h-screen flex justify-center items-center flex-col">
 <table class="w-9/12 table-auto border border-gray-200 rounded shadow mx-auto my-8 text-center rounded-lg">
   <thead>
     <tr class="bg-gray-100 text-gray-600 text-center font-medium">
@@ -19,8 +20,12 @@
     </tr>
     </tbody>
 </table>
+<div class="flex items-center flex-row gap-6 justify-center my-6">
+<button><a name="NuevoTelefono" id="NewPhone" class="px-4 py-2 bg-blue-500 text-white font-bold rounded-md shadow hover:bg-blue-700" href="/agregar" role="button">Agregar telefono</a></button>
+</div>
 
-<a name="NuevoTelefono" id="NewPhone" class="inline-flex items-center px-4 py-2 bg-blue-500 text-white font-bold rounded-md shadow hover:bg-blue-700" href="/agregar" role="button">Agregar telefono</a>
+</div>
+
 
 {{template "pie"}}
 {{end}}
