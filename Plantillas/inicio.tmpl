@@ -9,15 +9,32 @@
       <th class="px-4 py-2">MARCA</th>
       <th class="px-4 py-2">MODELO</th>
       <th class="px-4 py-2">PRECIO</th>
+      <th class="px-4 py-2">action</th>
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td class="border-bottom border-gray-200 px-4 py-2">1</td>
-      <td class="border-bottom border-gray-200 px-4 py-2">Xiaomi</td>
-      <td class="border-bottom border-gray-200 px-4 py-2">Redmin</td>
-      <td class="border-bottom border-gray-200 px-4 py-2">200</td>
-    </tr>
+    {{range .}}
+      <tr>
+        <td class="border border-gray-200 px-4 py-2">{{.ID}}</td>
+        <td class="border border-gray-200 px-4 py-2">{{.Marca}}</td>
+        <td class="border border-gray-200 px-4 py-2">{{.Modelo}}</td>
+        <td class="border border-gray-200 px-4 py-2">{{.Precio}}</td>
+<td class="py-2 px-4 border-b flex items-center space-x-2">
+    <form action="/eliminar" method="post" class="inline">
+        <input type="hidden" name="id" value="{{.ID}}">
+        <button type="submit" class="bg-red-500 hover:bg-red-700 text-white font-bold py-1 px-3 rounded">
+            Eliminar
+        </button>
+    </form>
+    <form action="/editar" method="get">
+        <input type="hidden" name="id" value="{{.ID}}">
+        <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-3 rounded">
+            Editar
+        </button>
+    </form>
+</td>
+      </tr>
+    {{end}}
     </tbody>
 </table>
 <div class="flex items-center flex-row gap-6 justify-center my-6">
